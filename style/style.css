@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Gruppo&family=Josefin+Sans:wght@300&family=Oswald&family=Rokkitt&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300");
+
+/* Variáveis */
+:root {
+  --primary-color: #ff3800;
+  --secondary-color: #f4f0e6;
+  --text-color: #1a1a1a;
+  --background-color: #f6f5f2;
+  --border-color: #ff3800;
+  --light-text-color: rgba(0, 0, 0, 0.7);
+  --font-family-main: 'Open Sans', Helvetica, Arial, sans-serif;
+  --transition-speed: 0.3s;
+}
+
+/* Estilizações Gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-main);
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--background-color);
+}
+
+/************************ Botoes ************************/
+.btn {
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 12px 27px;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: var(--text-color);
+  background: var(--secondary-color);
+  border: 2px solid var(--border-color);
+  cursor: pointer;
+  transition: ease-out var(--transition-speed);
+}
+
+.btn-code {
+  margin-left: 55px;
+}
+
+.btn-sm {
+  margin-left: 15px;
+  color: var(--secondary-color);
+  font-size: 16px;
+  border: 2px solid rgba(244, 240, 230, 0.8);
+  padding: 5px;
+  background-color: rgba(244, 240, 230, 0.22);
+}
+
+.btn:hover {
+  background-color: rgba(255, 56, 0, 0.5);
+  color: #fff;
+}
+
+.btn-border-1 {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-border-1:hover {
+  color: #fff;
+  background-color: rgba(255, 56, 0, 0.5);
+}
+
+.btn-border-1::before, .btn-code::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  z-index: -1;
+  transition: transform var(--transition-speed) ease;
+}
+
+.btn-border-1:hover::before, .btn-code:hover::before {
+  transform: scaleY(0);
+}
+
+/************************ Textos e Títulos ************************/
+p {
+  font-size: 24px;
+  font-family: var(--font-family-main);
+  color: var(--light-text-color);
+}
+
+h2 {
+  font-family: 'Scandia-web', sans-serif;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Titulações específicas */
+.h2-sobre, .h2-topicos, .h2-tec, .h3-servico {
+  font-size: 2.5em;
+  margin-left: 25px;
+  color: var(--primary-color);
+}
+
+.sobre-text, .p-servico {
+  color: #17141f;
+  font-weight: lighter;
+  margin-left: 25px;
+  font-family: "Roboto", sans-serif;
+}
+
+/************************ Redes Sociais ************************/
+.social-links {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 900;
+}
+
+.social-icon img {
+  width: 40px;
+  height: 40px;
+  margin-right: 25px;
+}
+
+.social-icon:hover img {
+  transform: scale(1.5);
+  transition: transform var(--transition-speed) ease-in-out;
+}
+
+/************************ Navbar ************************/
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  justify-content: center;
+}
+
+#header {
+  background-color: var(--background-color);
+  height: 4em;
+  width: 100%;
+  justify-content: center;
+}
+
+.navbar-nav .nav-link {
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  font-family: "Gruppo";
+  font-weight: bolder;
+  font-size: 20px;
+  margin-right: 20px;
+  transition: color var(--transition-speed) ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+/************************ Serviços ************************/
+.section-servico {
+  background-color: var(--background-color);
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+.servico-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.servico-item {
+  flex: 1;
+  min-width: 350px;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s, border-radius 0.5s;
+}
+
+.servico-item:hover {
+  transform: translateY(-5px);
+}
+
+/************************ Contato ************************/
+.articleContato {
+  padding-top: 50px;
+  margin-bottom: 80px;
+}
+
+.label {
+  font-size: 1.5em;
+  color: #fff;
+  margin: 35px 0 5px 40px;
+}
+
+.form-control {
+  border-color: var(--primary-color);
+  width: 500px;
+  margin: 0 0 20px 40px;
+}
+
+.btn-enviar {
+  margin-top: 50px;
+  background-color: #373434;
+  color: var(--secondary-color);
+  border: none;
+}
+
+.img-cont {
+  opacity: 0.9;
+}
+
+/************************ Skills ************************/
+.skills {
+  background-color: #373434;
+  padding: 50px 0;
+}
+
+.progressBar {
+  margin-bottom: 20px;
+}
+
+h5, .progressBar h4 {
+  overflow: hidden;
+  color: #fff;
+}
+
+.fa-star {
+  color: var(--primary-color);
+}
+
+/************************ Media Queries ************************/
+@media only screen and (max-width: 400px) {
+  body {
+    max-width: 400px;
+  }
+
+  #header {
+    max-width: 400px;
+    height: 50px;
+  }
+
+  .navbar-toggler {
+    background-color: var(--primary-color);
+  }
+}
